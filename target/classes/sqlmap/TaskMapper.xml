@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.darksouls.dao.TaskMapper" >
+    <resultMap id="BaseResultMap" type="com.darksouls.entity.task" >
+        <result column="order_title" property="order_title" jdbcType="VARCHAR" />
+        <result column="order_release_time" property="order_release_time" jdbcType="DATE" />
+        <result column="order_delivery_time" property="order_delivery_time" jdbcType="DATE" />
+        <result column="order_language" property="order_language" jdbcType="VARCHAR" />
+        <result column="order_type" property="order_type" jdbcType="VARCHAR" />
+        <result column="order_price" property="order_price" jdbcType="INTEGER" />
+        <result column="order_status" property="order_status" jdbcType="VARCHAR" />
+        <result column="order_doc" property="order_doc" jdbcType="VARCHAR" />
+        <result column="order_introduce" property="order_introduce" jdbcType="VARCHAR" />
+        <result column="order_attachment" property="order_attachment" jdbcType="VARCHAR" />
+        <result column="order_note" property="order_note" jdbcType="VARCHAR" />
+        <result column="order_flag" property="order_flag" jdbcType="INTEGER" />
+    </resultMap>
+
+    <insert id="tast_insert"   parameterType="com.darksouls.entity.task">
+        insert  into orders(order_title, order_release_time,
+        order_delivery_time, order_language, order_type,
+        order_price, order_doc, order_attachment, order_introduce,
+        order_note, order_status, order_flag)
+        value (#{order_title,jdbcType=VARCHAR},
+                   #{order_release_time},
+                   #{order_delivery_time},
+                   #{order_language,jdbcType=VARCHAR},
+                   #{order_type,jdbcType=VARCHAR},
+                   #{order_price,jdbcType=INTEGER},
+                   #{order_doc,jdbcType=VARCHAR},
+                   #{order_attachment,jdbcType=VARCHAR},
+                   #{order_introduce,jdbcType=VARCHAR},
+                   #{order_note,jdbcType=VARCHAR},
+                   #{order_status,jdbcType=VARCHAR},
+                   #{order_flag,jdbcType=INTEGER})
+    </insert>
+    <!--<sql id="Base_Column_List" >-->
+    <!--id, command, description, content-->
+  <!--</sql>-->
+
+    <!--<select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >-->
+        <!--select-->
+        <!--<include refid="Base_Column_List" />-->
+        <!--from message-->
+        <!--where id = #{id,jdbcType=INTEGER}-->
+    <!--</select>-->
+
+    <!--<delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >-->
+    <!--delete from message-->
+    <!--where id = #{id,jdbcType=INTEGER}-->
+  <!--</delete>-->
+
+    <!--<insert id="insert" parameterType="top.pimik.entity.Message" >-->
+    <!--insert into message (id, command, description, -->
+      <!--content)-->
+    <!--values (#{id,jdbcType=INTEGER}, #{command,jdbcType=VARCHAR}, #{description,jdbcType=VARCHAR}, -->
+      <!--#{content,jdbcType=VARCHAR})-->
+  <!--</insert>-->
+
+    <!--<insert id="insertSelective" parameterType="top.pimik.entity.Message" >-->
+        <!--insert into message-->
+        <!--<trim prefix="(" suffix=")" suffixOverrides="," >-->
+            <!--<if test="id != null" >-->
+                <!--id,-->
+            <!--</if>-->
+            <!--<if test="command != null" >-->
+                <!--command,-->
+            <!--</if>-->
+            <!--<if test="description != null" >-->
+                <!--description,-->
+            <!--</if>-->
+            <!--<if test="content != null" >-->
+                <!--content,-->
+            <!--</if>-->
+        <!--</trim>-->
+        <!--<trim prefix="values (" suffix=")" suffixOverrides="," >-->
+            <!--<if test="id != null" >-->
+                <!--#{id,jdbcType=INTEGER},-->
+            <!--</if>-->
+            <!--<if test="command != null" >-->
+                <!--#{command,jdbcType=VARCHAR},-->
+            <!--</if>-->
+            <!--<if test="description != null" >-->
+                <!--#{description,jdbcType=VARCHAR},-->
+            <!--</if>-->
+            <!--<if test="content != null" >-->
+                <!--#{content,jdbcType=VARCHAR},-->
+            <!--</if>-->
+        <!--</trim>-->
+    <!--</insert>-->
+    <!--<update id="updateByPrimaryKeySelective" parameterType="top.pimik.entity.Message" >-->
+        <!--update message-->
+        <!--<set >-->
+            <!--<if test="command != null" >-->
+                <!--command = #{command,jdbcType=VARCHAR},-->
+            <!--</if>-->
+            <!--<if test="description != null" >-->
+                <!--description = #{description,jdbcType=VARCHAR},-->
+            <!--</if>-->
+            <!--<if test="content != null" >-->
+                <!--content = #{content,jdbcType=VARCHAR},-->
+            <!--</if>-->
+        <!--</set>-->
+        <!--where id = #{id,jdbcType=INTEGER}-->
+    <!--</update>-->
+    <!--<update id="updateByPrimaryKey" parameterType="top.pimik.entity.Message" >-->
+    <!--update message-->
+    <!--set command = #{command,jdbcType=VARCHAR},-->
+      <!--description = #{description,jdbcType=VARCHAR},-->
+      <!--content = #{content,jdbcType=VARCHAR}-->
+    <!--where id = #{id,jdbcType=INTEGER}-->
+  <!--</update>-->
+</mapper>

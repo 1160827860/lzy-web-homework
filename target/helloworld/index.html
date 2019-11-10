@@ -1,0 +1,79 @@
+<!--A Design by W3layouts
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>ITKIM 订单管理页面 </title>
+	<!-- Meta tags -->
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="keywords" content="ITKIM 订单管理页面"/>
+	<script type="application/x-javascript">
+		addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); }
+	</script>
+	<!-- Meta tags -->
+	<!--stylesheets-->
+	<link href="css/style.css" rel='stylesheet' type='text/css' media="all">
+	<!--//style sheet end here-->
+
+	<link href="//fonts.googleapis.com/css?family=Barlow:300,400,500,600" rel="stylesheet">
+</head>
+
+<body>
+	<h1 class="header-w3ls">
+		ITKIM 订单管理平台</h1>
+	<!--login form-->
+	<div class="hotel-bothside">
+		<form action="/ITKIM/order/create" method="post" enctype="multipart/form-data" accept-charset="UTF-8">
+			<div class="mid-cls">
+				<div class="hotel-left-w3ls">
+					<div class="main">
+					</div>
+					<div class="form-add-to-w3ls add">
+						<input id="title" type="text" name="order_title" placeholder="标题" required="">
+						<div class="clear"></div>
+						<input id="language" type="text" name="order_language" placeholder="编程语言" required="">
+						<div class="clear"></div>
+						<input id="type" type="text" name="order_type" required="" placeholder="订单类型">
+						<div class="clear"></div>
+						
+						<div class="form-control-w3l">
+							
+					
+							<textarea id="introduce" name="order_introduce" placeholder="订单需求" required="" ></textarea>	
+							
+						</div>
+						<input id="price" name="order_price" placeholder="订单价格" required=""style="width: 220px;height: 40px;">
+				
+						<input id="deliverytime" name="order_delivery_time" placeholder="完成时间格式如：yyyy-mm-dd" required=""style="width: 220px;height: 40px;">
+					</div>
+					<div class="clear"></div>
+				</div>
+				<div class="hotel-right-w3ls">
+					<div class="form-control-w3l">
+						
+						<textarea id="note" name="order_note" placeholder="订单备注" required=""></textarea>
+						<h2>附件</h2>
+						<input id="path" type="file" name="attachment"/>
+						<h2>文档</h2>
+						<input id="doc" type="file" name="doc"  />
+					</div>
+					<div class="clear"></div>
+					<div class="btnn">
+						<button id="finish" type="submit">提交</button><br>
+					</div>
+				</div>
+			</div>
+		</form>
+	</div>
+
+
+</body>
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script src="./js/layer.js"></script>
+</html>
